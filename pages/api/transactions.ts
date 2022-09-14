@@ -7,7 +7,7 @@ export default async () => {
     await axios
         .get<Transaction[]>(url, {
             headers: {
-                Authorization: ''
+                Authorization: `${process.env.UP_AUTH}`
             }
         })
         .then(res => {

@@ -7,7 +7,7 @@ export default async () => {
     await axios
         .get<Account[]>(url, {
             headers: {
-                Authorization: ''
+                Authorization: `${process.env.UP_AUTH}`
             }
         })
         .then(res => {
